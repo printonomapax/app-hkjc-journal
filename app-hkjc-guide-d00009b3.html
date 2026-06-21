@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香港赛马会 · 站点专题介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #2e3a47;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page-wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 首页横幅 —— 杂志式大标题区域 */
+        .hero-banner {
+            background: linear-gradient(145deg, #ffffff 0%, #f9fafb 100%);
+            border: 1px solid #e2e6ed;
+            border-radius: 28px;
+            padding: 2.8rem 2.2rem 2.4rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
+            position: relative;
+        }
+
+        .hero-banner::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #b3bbc8;
+            border-radius: 4px;
+            margin-top: 1.2rem;
+        }
+
+        .hero-banner h1 {
+            font-size: 2.5rem;
+            font-weight: 560;
+            letter-spacing: 0.02em;
+            color: #1f2a3a;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #5e6e82;
+            margin-top: 0.2rem;
+            border-left: 3px solid #cbd0d8;
+            padding-left: 1rem;
+            font-weight: 390;
+        }
+
+        /* 背景说明卡片 */
+        .card-background {
+            background: #ffffff;
+            border: 1px solid #e6eaf0;
+            border-radius: 24px;
+            padding: 2rem 2rem 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card-background:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #878f9e;
+            border-bottom: 2px solid #e0e4eb;
+            padding-bottom: 0.35rem;
+            margin-bottom: 1.2rem;
+            font-weight: 550;
+        }
+
+        .card-background p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .card-background p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 三段自然介绍 —— 使用卡片网格 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2.2rem 0;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid #e8ecf3;
+            border-radius: 22px;
+            padding: 1.8rem 1.6rem 1.8rem;
+            flex: 1 1 250px;
+            min-width: 200px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            transition: transform 0.1s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-item h3 {
+            font-size: 1.25rem;
+            font-weight: 520;
+            color: #1e2b3b;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-item p {
+            color: #3e4b5a;
+            font-size: 0.95rem;
+        }
+
+        /* 页尾访问提示 —— 杂志脚注风格 */
+        .footer-note {
+            margin-top: 3rem;
+            padding: 1.6rem 0 0.8rem;
+            border-top: 1px solid #dce1e9;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            color: #4e5c6e;
+        }
+
+        .footer-note .sentence {
+            max-width: 70%;
+        }
+
+        .footer-note a {
+            color: #1d3b5c;
+            text-decoration: none;
+            border-bottom: 1px dotted #a6b4c9;
+            font-weight: 500;
+            transition: border-color 0.15s;
+        }
+
+        .footer-note a:hover {
+            border-bottom: 1px solid #1d3b5c;
+        }
+
+        .footer-meta {
+            color: #7b889b;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 700px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero-banner {
+                padding: 1.8rem 1.2rem 1.6rem;
+            }
+
+            .hero-banner h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero-sub {
+                font-size: 1rem;
+                padding-left: 0.8rem;
+            }
+
+            .card-background {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .feature-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .feature-item {
+                flex: 1 1 auto;
+                padding: 1.5rem 1.2rem;
+            }
+
+            .footer-note {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .footer-note .sentence {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .hero-banner h1 {
+                font-size: 1.7rem;
+            }
+
+            .section-label {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- 首页横幅 -->
+    <div class="hero-banner">
+        <h1>香港赛马会 · 站点导览</h1>
+        <div class="hero-sub">信息整合 · 可信说明 · 一站浏览</div>
+    </div>
+
+    <!-- 背景说明卡片 -->
+    <div class="card-background">
+        <div class="section-label">背景说明</div>
+        <p>香港赛马会自成立以来，始终在香港体育、社区及慈善领域发挥独特作用。作为一家非牟利机构，其运作模式兼顾赛马运动推广与社会回馈，每年将盈余拨捐至各类公益项目。</p>
+        <p>官方网站 app-hkjc.com 整合了赛事资讯、会员服务及机构动态，为公众提供查阅相关信息的统一窗口。页面内容均以官方发布为基础，保持信息严谨与时效性。</p>
+    </div>
+
+    <!-- 三段自然介绍（卡片式） -->
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>赛事资讯</h3>
+            <p>提供赛程安排、赛事结果及马匹、骑师数据统计，方便关注赛马运动的用户随时跟进。所有数据源自官方记录，更新稳定。</p>
+        </div>
+        <div class="feature-item">
+            <h3>可信渠道</h3>
+            <p>依托机构直接管理，避免二手信息偏差。网站采用规范的资料呈现方式，帮助用户快速定位所需内容，减少信息筛选成本。</p>
+        </div>
+        <div class="feature-item">
+            <h3>社区与慈善</h3>
+            <p>展示赛马会在教育、医疗、文化等领域的资助项目。相关报告与年度总结均可在站点内查阅，体现机构透明运作理念。</p>
+        </div>
+    </div>
+
+    <!-- 补充说明段落（延续背景介绍） -->
+    <div class="card-background" style="margin-top: 0.2rem;">
+        <p>值得一提的是，站点界面以实用为导向，没有冗余装饰。用户无论是查询赛马数据还是了解慈善动向，都能以较少操作获得回应。这种设计思路与赛马会一贯强调的效率、责任相吻合。</p>
+        <p>对于希望深入了解机构沿革、管治架构及年度财务摘要的访客，网站同样准备了清晰的文档入口。各部分内容之间保持逻辑衔接，阅读体验较为流畅。</p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <span class="sentence">
+            若希望直接浏览整合信息，可前往
+            <a href="https://app-hkjc.com">香港赛马会</a>
+            查阅赛事、慈善及机构详情。
+        </span>
+        <span class="footer-meta">杂志专题 · 说明页</span>
+    </div>
+
+</div>
+</body>
+</html>
